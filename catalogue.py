@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------
 # Title:   Scientific Visualisation - Python & Matplotlib
 # Author:  Nicolas P. Rougier
-# License: Creative Commons BY-NC-SA International 4.0
+# License: BSD
 # ----------------------------------------------------------------------------
 import numpy as np
 import matplotlib.pyplot as plt
