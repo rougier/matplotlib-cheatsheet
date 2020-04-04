@@ -34,6 +34,7 @@ ax.xaxis.set_minor_formatter(ticker.NullFormatter())
 ax.text(0.0, 0.1, "NullFormatter()",
         fontsize=16,
         transform=ax.transAxes,
+        color='blue',
         family="monospace")
 
 # Fixed formatter
@@ -49,6 +50,7 @@ ax.xaxis.set_minor_formatter(ticker.FixedFormatter(minors))
 ax.text(0.0, 0.1, "FixedFormatter(['', '0', '1', ...])",
         fontsize=15,
         transform=ax.transAxes,
+        color='blue',
         family="monospace")
 
 
@@ -64,7 +66,10 @@ ax.xaxis.set_major_locator(ticker.MultipleLocator(1.00))
 ax.xaxis.set_minor_locator(ticker.MultipleLocator(0.25))
 ax.xaxis.set_major_formatter(major_formatter)
 ax.text(0.0, 0.1, 'FuncFormatter(lambda x, pos: "[%.2f]" % x)',
-        fontsize=15, transform=ax.transAxes, family="monospace")
+        fontsize=15,
+        transform=ax.transAxes,
+        color='blue',
+        family="monospace")
 
 
 # FormatStr formatter
@@ -74,7 +79,10 @@ ax.xaxis.set_major_locator(ticker.MultipleLocator(1.00))
 ax.xaxis.set_minor_locator(ticker.MultipleLocator(0.25))
 ax.xaxis.set_major_formatter(ticker.FormatStrFormatter(">%d<"))
 ax.text(0.0, 0.1, "FormatStrFormatter('>%d<')",
-        fontsize=15, transform=ax.transAxes, family="monospace")
+        fontsize=15,
+        transform=ax.transAxes,
+        color='blue',
+        family="monospace")
 
 # Scalar formatter
 ax = fig.add_subplot(n, 1, 5)
@@ -85,6 +93,7 @@ ax.xaxis.set_major_formatter(ticker.ScalarFormatter(useMathText=True))
 ax.text(0.0, 0.1, "ScalarFormatter()",
         fontsize=15,
         transform=ax.transAxes,
+        color='blue',
         family="monospace")
 
 # StrMethod formatter
@@ -94,7 +103,10 @@ ax.xaxis.set_major_locator(ticker.MultipleLocator(1.00))
 ax.xaxis.set_minor_locator(ticker.MultipleLocator(0.25))
 ax.xaxis.set_major_formatter(ticker.StrMethodFormatter("{x}"))
 ax.text(0.0, 0.1, "StrMethodFormatter('{x}')",
-        fontsize=15, transform=ax.transAxes, family="monospace")
+        fontsize=15,
+        transform=ax.transAxes,
+        color='blue',
+        family="monospace")
 
 # Percent formatter
 ax = fig.add_subplot(n, 1, 7)
@@ -103,7 +115,10 @@ ax.xaxis.set_major_locator(ticker.MultipleLocator(1.00))
 ax.xaxis.set_minor_locator(ticker.MultipleLocator(0.25))
 ax.xaxis.set_major_formatter(ticker.PercentFormatter(xmax=5))
 ax.text(0.0, 0.1, "PercentFormatter(xmax=5)",
-        fontsize=15, transform=ax.transAxes, family="monospace")
+        fontsize=15,
+        transform=ax.transAxes,
+        color='blue',
+        family="monospace")
 
 # Push the top of the top axes outside the figure because we only show the
 # bottom spine.
