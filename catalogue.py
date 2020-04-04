@@ -48,11 +48,20 @@ def scatter(ax):
     ax.scatter(X, Y, S/2, clip_path=clip2,
                linewidth=0.00, facecolor="red", edgecolor="None", alpha=0.5)
 
-    ax.set_xlabel("Scatter plot")
-    
+    ax.text(0.0, -0.08, 'Scatter plot',
+            color='k',
+            ha='left',
+            size=8,
+            transform=ax.transAxes)
+    ax.text(1.0, -0.08, 'ax.scatter()',
+            color='blue',
+            ha='right',
+            size=8,
+            transform=ax.transAxes,
+            family="monospace")
+
 
 def lineplot(ax):
-    ax.set_xlabel("Line plot")
 
     clip1, clip2 = clip_path(ax)
     
@@ -67,7 +76,19 @@ def lineplot(ax):
     ax.plot(X, Y, color="red", linewidth=2, clip_path=clip2)
     ax.fill_between(X, Y+0.25, Y-0.25, clip_path=clip2,
                     facecolor="red", edgecolor="None", alpha=0.15)
-    
+
+    ax.text(0.0, -0.08, 'Line plot',
+            color='k',
+            ha='left',
+            size=8,
+            transform=ax.transAxes)
+    ax.text(1.0, -0.08, 'ax.plot()',
+            color='blue',
+            ha='right',
+            size=8,
+            transform=ax.transAxes,
+            family="monospace")
+
 
 def quiverplot(ax):
     clip1, clip2 = clip_path(ax)
@@ -83,7 +104,18 @@ def quiverplot(ax):
     ax.quiver(X, Y, 0.1*U, 0.1*V, T-1, scale=1, width=0.015, clip_path=clip2,
               edgecolor='black', linewidth=.5, cmap="hot")
 
-    ax.set_xlabel("Quiver plot")
+    ax.text(0.0, -0.08, 'Quiver plot',
+            color='k',
+            ha='left',
+            size=8,
+            transform=ax.transAxes)
+    ax.text(1.0, -0.08, 'ax.quiver()',
+            color='blue',
+            ha='right',
+            size=8,
+            transform=ax.transAxes,
+            family="monospace")
+
 
 def contourplot(ax):
 
@@ -116,7 +148,18 @@ def contourplot(ax):
     for collection in CS.collections:
         collection.set_clip_path(clip2)
 
-    ax.set_xlabel("Contour plot")
+    ax.text(0.0, -0.08, 'Contour plot',
+            color='k',
+            ha='left',
+            size=8,
+            transform=ax.transAxes)
+    ax.text(1.0, -0.08, 'ax.contour()',
+            color='blue',
+            ha='right',
+            size=8,
+            transform=ax.transAxes,
+            family="monospace")
+
 
 def imageplot(ax):
     def f(x,y): return (1-x/2+x**5+y**3)*np.exp(-x**2-y**2)
@@ -132,8 +175,18 @@ def imageplot(ax):
     ax.imshow(Z, extent=[-1,+1,-1,+1], origin="upper", 
               cmap="hot", interpolation="bicubic", clip_path=clip2)
 
+    ax.text(0.0, -0.08, 'Image plot',
+            color='k',
+            ha='left',
+            size=8,
+            transform=ax.transAxes)
+    ax.text(1.0, -0.08, 'ax.imshow()',
+            color='blue',
+            ha='right',
+            size=8,
+            transform=ax.transAxes,
+            family="monospace")
 
-    ax.set_xlabel("Image plot")
 
 def pieplot(ax):
     clip1, clip2 = clip_path(ax)
@@ -174,7 +227,18 @@ def pieplot(ax):
                      edgecolor="black", facecolor="None", clip_on=False)
     ax.add_artist(rect)
 
-    ax.set_xlabel("Pie plot")
+    ax.text(0.0, -0.08, 'Pie plot',
+            color='k',
+            ha='left',
+            size=8,
+            transform=ax.transAxes)
+    ax.text(1.0, -0.08, 'ax.pie()',
+            color='blue',
+            ha='right',
+            size=8,
+            transform=ax.transAxes,
+            family="monospace")
+
 
 def threedplot(ax):
 
@@ -203,11 +267,24 @@ def threedplot(ax):
     rect = Rectangle((0,0), 1, 1, transform=ax.transAxes, linewidth=0.75,
                      edgecolor="black", facecolor="None", clip_on=False)
     ax.add_artist(rect)
-    text = Text(0.5, -0.025, "3D plot", clip_on=False,
-                ha="center", va="top", transform=ax.transAxes)
+
+    text = Text(0.0, -0.08, "3D plot",
+                clip_on=False,
+                size=8,
+                ha="left",
+                transform=ax.transAxes)
     ax.add_artist(text)
-    
-    
+
+    text = Text(1.0, -0.08, 'ax.plot_surface()',
+                color='blue',
+                clip_on=False,
+                size=8,
+                ha="right",
+                transform=ax.transAxes,
+                family="monospace")
+    ax.add_artist(text)
+
+
 def barplot(ax):
     clip1, clip2 = clip_path(ax)
 
@@ -220,7 +297,19 @@ def barplot(ax):
     ax.bar(X, +Y1, 1, facecolor='#ffaaaa', edgecolor='white', clip_path=clip2)
     ax.bar(X, -Y2, 1, facecolor='#ff7777', edgecolor='white', clip_path=clip2)
     ax.set_xlim(-1,n)
-    ax.set_xlabel("Bar plot")
+
+    ax.text(0.0, -0.08, 'Bar plot',
+            color='k',
+            ha='left',
+            size=8,
+            transform=ax.transAxes)
+    ax.text(1.0, -0.08, 'ax.bar()',
+            color='blue',
+            ha='right',
+            size=8,
+            transform=ax.transAxes,
+            family="monospace")
+
 
 def boxplot(ax):
     clip1, clip2 = clip_path(ax)
@@ -253,9 +342,19 @@ def boxplot(ax):
                 pass
             item.set_clip_path(clip2)
 
-            
     ax.set_xlim(0,n+1), ax.set_xticks([])
-    ax.set_xlabel("Box plot")
+
+    ax.text(0.0, -0.08, 'Box plot',
+            color='k',
+            ha='left',
+            size=8,
+            transform=ax.transAxes)
+    ax.text(1.0, -0.08, 'ax.boxplot()',
+            color='blue',
+            ha='right',
+            size=8,
+            transform=ax.transAxes,
+            family="monospace")
 
 
 fig, axes = plt.subplots(3, 3, figsize=(8, 8))
