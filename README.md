@@ -1,8 +1,18 @@
-### Matplotlib cheat sheet
+## Brand new cheatsheets and handouts
 
-This cheat sheet is part of an upcoming open access book on scientific visualization (using python and matplotlib) to
-be released during summer 2020 (hopefully). Sources will be available at the end of the writing, the PDF book will be open-access and the printed book will cost 50$. You can read more and support the project at https://github.com/rougier/scientific-visualization-book.
+Sources now at https://github.com/matplotlib/cheatsheets 
 
----
+Book at https://github.com/rougier/scientific-visualization-book
 
-![](matplotlib-cheatsheet.png)
+
+![](https://raw.githubusercontent.com/matplotlib/cheatsheets/master/cheatsheets-1.png)
+
+![](https://raw.githubusercontent.com/matplotlib/cheatsheets/master/cheatsheets-2.png)
+
+![](https://raw.githubusercontent.com/matplotlib/cheatsheets/master/handout-beginner.png)
+
+![](https://raw.githubusercontent.com/matplotlib/cheatsheets/master/handout-intermediate.png)
+
+![](https://raw.githubusercontent.com/matplotlib/cheatsheets/master/handout-tips.png)
+
+
